@@ -31,6 +31,7 @@ def start():
             root.destroy()
             i = True
             while True:
+                 timee = str(time.strftime("%H:%M:%S", time.localtime()))
                  if timee[:5] == f'{text_houre}:{text_minutese}' and i:
                      i = False
                      sound = pyglet.media.load(f'{mus}.mp3', streaming=True)
