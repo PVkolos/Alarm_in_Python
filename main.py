@@ -4,6 +4,7 @@ from tkinter import *
 
 root = Tk()
 root.geometry("420x450")
+root.resizable(width=False, height=False)
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 cn = Canvas(root, bg='white', height=30, width=30)
