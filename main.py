@@ -1,9 +1,9 @@
 import pyglet
-import time, sys
+import time
 from tkinter import *
 
 root = Tk()
-root.geometry("420x450")
+root.geometry("430x450")
 root.resizable(width=False, height=False)
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
@@ -20,11 +20,11 @@ def start():
         count = (int(text_hour.get()) - int(timee[:2])) * 60 + (int(text_minutes.get()) - int(timee[3:5]))
         if count > -1 and (int(text_houre) <= 23 and int(text_minutese) <= 59):
             mus = variable.get()
-            l = Label(root, text=f'Будильник установлен на {text_hour.get()}:{text_minutes.get()}',
-                                bg='#FFCC00', fg='#000000', bd=2, font='Verdana', width=43, height=2)
+            l = Label(root, text=f'Установлен на {text_hour.get()}:{text_minutes.get()}',
+                                bg='#FFCC00', fg='#000000', bd=2, font='Verdana', width=33, height=2)
             l.place(x=0, y=340)
-            l = Label(root, text=f'Будильник будет воспроизведен через {count} мин.',
-                                bg='#FFCC00', fg='#000000', bd=2, font='Verdana', width=43, height=2)
+            l = Label(root, text=f'Воспроизведется через {count} мин.',
+                                bg='#FFCC00', fg='#000000', bd=2, font='Verdana', width=33, height=2)
             l.place(x=0, y=400)
             root.update()
             time.sleep(4)
@@ -41,7 +41,7 @@ def start():
                  time.sleep(1)
         else:
             l = Label(root, text='Проверьте вводимые данные!',
-                                bg='#FFCC00', fg='#000000', bd=2, font='Verdana', width=43, height=2)
+                                bg='#FFCC00', fg='#000000', bd=2, font='Verdana', width=33, height=2)
             l.place(x=0, y=340)
     except:
         pass
@@ -67,12 +67,12 @@ shr = OptionMenu(root, variable, 'Мелодия 1', 'Мелодия 2', 'Мел
 
 lbl.pack()
 lbl2.place(x=0, y=60)
-hour.place(x=45, y=90)
-minutes.place(x=45, y=130)
-text_hour.place(x=210, y=91)
-text_minutes.place(x=210, y=131)
+hour.place(x=45, y=100)
+minutes.place(x=45, y=140)
+text_hour.place(x=260, y=100)
+text_minutes.place(x=260, y=140)
 miusik.place(x=10, y=190)
-shr.place(x=240, y=190)
+shr.place(x=280, y=205)
 btn.place(x=0, y=270)
 canvas.pack()
 root.mainloop()
